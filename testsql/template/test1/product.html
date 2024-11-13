@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Details</title>
+</head>
+<body>
+    <h1>Product Details</h1>
+
+    {% if data %}
+        <table border="2" margine >
+            <th>ID</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+
+        {% for d in data %}
+            <tr>
+            <td>{{ d.id }}</td>
+            <td>{{ d.name }}</td>
+            <td>{{ d.price }}</td>
+            <td>{{ d.qty }}</td>
+
+            </tr>
+                  <hr>
+        {% endfor %}
+
+        </table>
+    {% else %}
+        <h2>No records found</h2>
+    {% endif %}
+</body>
+</html>

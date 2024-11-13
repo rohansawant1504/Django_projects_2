@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Feedback Form</title>
+</head>
+<body>
+<h1 class="text-center">Welcome to the Feedback Form Page</h1>
+<hr>
+<div class="container mt-5" align="left">
+    <form class=""  method="POST" >
+         {% csrf_token %}
+         {{form.as_p}}
+        <input type="submit" class="btn btn-primary"  name="" value="Submit">
+    </form>
+</div>
+</body>
+</html>

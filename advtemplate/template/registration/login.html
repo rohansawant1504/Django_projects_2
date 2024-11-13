@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% extends 'advapp/base.html' %}
+
+{% block base_block %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+</head>
+<body>
+    <div class="container" align="center">
+        <h1>Welcome to the Login Page</h1>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
+{% endblock %}

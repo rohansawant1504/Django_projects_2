@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% extends 'loanapp/base.html' %}
+
+{% block base_block %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+</head>
+<body>
+    <div class="container" align="center">
+      <div class="jumbotron">
+        <h1>Welcome to the Login Page</h1>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+        </div>
+    </div>
+</body>
+</html>
+{% endblock %}

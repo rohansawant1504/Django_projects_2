@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{%extends 'curdapp/base.html'%}
+{%block base_block%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    table,th,td{
+    border : 1px solid black;
+    border-collapse:collapse;
+    }
+    th,td{
+    padding: 5px;
+    test-align: center;
+    }
+</style>
+<body>
+<h1 align="center"> Student Data </h1>
+<table border="3">
+    <thread>
+    <th>Roll_no</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Admissions_date</th>
+    <th>Create_record</th>
+    </thread>
+    {%for stud in data%}
+    <tr>
+        <td>{{stud.roll}}</td>
+        <td>{{stud.name}}</td>
+        <td>{{stud.email}}</td>
+        <td>{{stud.admissions_date}}</td>
+        <td>{{stud.create_record}}</td>
+        <td><a href="update/{{stud.roll}}">Update</a> <a href="delete/{{stud.roll}}">Delete</a></td>
+    </tr>
+{%endfor%}
+</table><br><br>
+<a href="/create" class="btn btn-primary btn-lg">Insert New Student data</a>
+{%endblock%}
+</body>
+</html>
